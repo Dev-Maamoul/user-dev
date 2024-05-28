@@ -21,3 +21,7 @@ flutter:
    - assets/images/start_img_1.jpg
    - assets/images/start_img_2.jpg
    - assets/images/start_img_3.jpg
+  fonts:
+    - family: InriaSerif-BoldItalic
+      fonts:
+        - asset: assets\images\fonts\InriaSerif-BoldItalic.ttf
