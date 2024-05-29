@@ -19,11 +19,14 @@ class onboardingWidget extends StatelessWidget {
     return Stack(children: [
       Padding(
         padding: const EdgeInsets.only(top: 0.8),
-        child: Image.asset(
-          image,
-          width: 564,
-          height: 746,
-          alignment: Alignment.topCenter,
+        child: Opacity(
+          opacity: 0.7,
+          child: Image.asset(
+            image,
+            width: 564,
+            height: 760,
+            alignment: Alignment.topCenter,
+          ),
         ),
       ),
       Positioned(

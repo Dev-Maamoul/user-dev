@@ -41,33 +41,32 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Stack(children: [
-          PageView.builder(
-              controller: _pageController,
-              itemCount: _pages.length,
-              onPageChanged: (int page) {
-                setState(() {
-                  _activePage = page;
-                });
-              },
-              itemBuilder: (BuildContext context, int index) {
-                return onboardingWidget(
-                  image: _pages[index]['image'],
-                  title: _pages[index]['title'],
-                  bottonTitle: _pages[index]['bottonTitle'],
-                  onTab: onNextPage,
-                );
-              }),
-          Positioned(
-              bottom: 25,
-              left: 100,
-              right: 100,
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: _buildIndicators()))
-        ]),
-      ),
+      backgroundColor: Color.fromRGBO(179, 219, 204, 1),
+      body: Stack(children: [
+        PageView.builder(
+            controller: _pageController,
+            itemCount: _pages.length,
+            onPageChanged: (int page) {
+              setState(() {
+                _activePage = page;
+              });
+            },
+            itemBuilder: (BuildContext context, int index) {
+              return onboardingWidget(
+                image: _pages[index]['image'],
+                title: _pages[index]['title'],
+                bottonTitle: _pages[index]['bottonTitle'],
+                onTab: onNextPage,
+              );
+            }),
+        Positioned(
+            bottom: 25,
+            left: 100,
+            right: 100,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: _buildIndicators()))
+      ]),
     );
   }
 
